@@ -7,13 +7,6 @@ public class Queen extends Piece {
     }
 
     
-    @Override
-    public void move(int x,int y) {
-    	if (this.legal())
-    	this.x = x;
-    	this.y = y;
-    }
-    
     public boolean legal(int x, int y) {
     	boolean legal = false;
     	if (this.x == x || this.y == y)

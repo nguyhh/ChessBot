@@ -7,13 +7,7 @@ public class Bishop extends Piece {
         super(board, black, i, i0);
     }
 
-    
-    @Override
-    public void move(int x,int y) {
-    	if (this.legal())
-    	this.x = x;
-    	this.y = y;
-    }
+
     
     public boolean legal(int x, int y) {
     	boolean legal = false;

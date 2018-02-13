@@ -7,13 +7,6 @@ public class King extends Piece {
         super(board, colour, x, y);
     }
 
-   //Move method
-    public void move(int x,int y) {
-    	if (this.legal())
-    	this.x = x;
-    	this.y = y;
-    }
-
     //check if legal
     public boolean legal(int x, int y) {
     	boolean legal = false;
