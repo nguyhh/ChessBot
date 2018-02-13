@@ -1,8 +1,8 @@
 package chessbot;
 
-import java.util.ArrayList;
-
 public class Board {
+	
+	
 
     Piece[][] board = new Piece[8][8];
 /*
@@ -12,7 +12,7 @@ public class Board {
          */
     
     public Board() {       
-        //Create all pawns
+        //Create all pieces
         board[0][0] = new Rook("black", 0, 0);
         board[0][1] = new Knight("black", 0, 1);
         board[0][2] = new Bishop("black", 0, 2);
@@ -36,6 +36,7 @@ public class Board {
             board[6][j] = new Pawn("white", 6, j);
         }
 
+        //Printing everything
         for (Piece[] a : board) {
             for (Piece b : a) {
                 if (a != null) {

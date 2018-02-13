@@ -3,13 +3,24 @@ package chessbot;
 
 public class King extends Piece {
 
-    public King(String colour, int x, int y) {
-        super(colour, x, y);
+    public King(Piece [][] board, String colour, int x, int y) {
+        super(board, colour, x, y);
     }
 
-    @Override
-    public void move() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   //Move method
+    public void move(int x,int y) {
+    	if (this.legal())
+    	this.x = x;
+    	this.y = y;
     }
 
+    //check if legal
+    public boolean legal(int x, int y) {
+    	boolean legal = false;
+    	if(Math.abs(this.x-x) == 1|| Math.abs(this.y-y)==1)
+    			legal= true;
+    	return legal;
+    }
+    
+    
 }
