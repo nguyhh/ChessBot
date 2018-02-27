@@ -3,8 +3,8 @@ package chessbot;
 
 public class Bishop extends Piece {
 
-    Bishop(Piece [][] board, String black, int i, int i0) {
-        super(board, black, i, i0);
+    Bishop(String black, int i, int i0) {
+        super(black, i, i0);
     }
 
 

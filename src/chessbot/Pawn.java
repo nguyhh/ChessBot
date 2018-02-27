@@ -1,42 +1,30 @@
 package chessbot;
 
+public class Pawn extends Piece {
 
-public class Pawn extends Piece{
-
-    public Pawn(Piece[][] board, String colour, int x, int y) {
-        super(board, colour, x, y);
+    public Pawn(String colour, int x, int y) {
+        super(colour, x, y);
     }
 
     //legal or not
     public boolean legal(int x, int y) {
-    	boolean legal = false;
-    	
-    	if(this.colour=="black") {
-    		if(this.x==1)
-    			if(x-this.x==2)
-    				legal=true;
-    		if(x-this.x==1)
-    			legal=true;
-    	}
-    	
-    	if(this.colour=="white") {
-    		if(this.x==6)
-    			if(this.x-x==2)
-    				legal=true;
-    		if(this.x-x==1)
-    			legal=true;
-    	}		
-    	return legal;
+        boolean legal = false;
+
+        if (this.colour == "black") {
+            /*
+            1.Only legal to move along y
+            2. if initia position, then legal to move to move 2 
+            3. else move 1;
+             */
+
+            return ((this.x == 1 && (x - this.x) == 2 && isPathClear(x + 1, y)|| (x - this.x == 1))
+                    && (this.y == y)
+                    && (isPathClear(x, y)));
+        } else {
+
+            return ((this.x == 6 && (this.x - x) == 2&& isPathClear(x - 1, y) || (this.x - x == 1))
+                    && (this.y == y)
+                    && (isPathClear(x, y)));
+        }
     }
-
-
-    //no idea how to make this...?
-    public int[][] possibleposition() {
-    	int [][] listPosition;
-    	
-    	
-    	
-    	return listPosition;
-    }
-
 }

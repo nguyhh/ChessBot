@@ -3,8 +3,8 @@ package chessbot;
 
 public class King extends Piece {
 
-    public King(Piece [][] board, String colour, int x, int y) {
-        super(board, colour, x, y);
+    public King(String colour, int x, int y) {
+        super(colour, x, y);
     }
 
     //check if legal

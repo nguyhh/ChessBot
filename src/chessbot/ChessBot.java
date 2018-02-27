@@ -20,6 +20,11 @@ public class ChessBot {
      Piece[] bla = new Piece[16];
      
      Board bobo = new Board();
+//     for (int i = 0 ; i<bla.length; i++){
+//         for(int j = 0; j < bla.length; j++){
+//         System.out.println(bla[i][j]);
+//         } 
+//     }
 
     }
 

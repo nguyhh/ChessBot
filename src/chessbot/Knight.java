@@ -3,15 +3,15 @@ package chessbot;
 
 public class Knight extends Piece {
 
-    Knight(Piece [][] board, String black, int i, int j) {
-       super(board, black, i, j);
+    Knight(String black, int i, int j) {
+       super(black, i, j);
     }
 
     @Override
     public void move(int x,int y) {
-    	if (this.legal())
-    	this.x = x;
-    	this.y = y;
+//    	if (this.legal())
+//    	this.x = x;
+//    	this.y = y;
     }
     
     public boolean legal(int x, int y) {
